@@ -671,3 +671,14 @@ h3 {
 .carousel-wrapper .flickity-slider {
    overflow: visible;
 }
+
+
+
+
+.card-title {
+   color: white;
+}
+
+.turnOff {
+   background-color: grey;
+}

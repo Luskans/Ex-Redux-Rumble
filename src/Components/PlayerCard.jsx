@@ -2,7 +2,13 @@ import React from 'react';
 import ButtonCapacity from './ButtonCapacity';
 import ProgressBar from './ProgressBar';
 
-export default function PlayerCard({ key, player }) {
+export default function PlayerCard({ player }) {
+   
+   if (!player.turn) {
+      const playerStyle = document.querySelector(`#joueur${player.id}`);
+      playerStyle.classList.add('turnOff');
+   }
+
    return (
       <div
          key={player.id}
