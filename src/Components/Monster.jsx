@@ -4,17 +4,7 @@ import { useSelector } from 'react-redux';
 
 export default function Monster() {
    const monster = useSelector((state) => state.fight.monster);
-   const result = useSelector((state) => state.fight.fight);
-   const resultDisplay = () => {
-      if (result === "victory") {
-         return <h2>Victoire !</h2>
-      } else if (result === "defeat") {
-         return <h2>Défaite !</h2>
-      } else {
-         null
-      }
-   };
-
+   
    return (
       <section>
          <div className="container">
@@ -33,7 +23,6 @@ export default function Monster() {
                                  src="http://res.publicdomainfiles.com/pdf_view/67/13925387417373.png"
                                  alt="monster"
                               />
-                              {resultDisplay()}
                            </div>
 
                            <div id="comboOnMonster" className="col-sm-6"></div>

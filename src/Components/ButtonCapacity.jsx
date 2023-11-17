@@ -8,11 +8,11 @@ export default function ButtonCapacity({ player }) {
    const combat = () => {
       if (player.turn) {
          dispatch(hitMonster({
-            damage: 10,
+            damage: 40,
             id: player.id
          }));
          dispatch(hitBack({
-            damage: 25,
+            damage: 20,
             id: player.id
          }));
          dispatch(changeTurn(player.id));
@@ -24,7 +24,7 @@ export default function ButtonCapacity({ player }) {
    return (
       <button
          type="button"
-         onClick={combat}
+         onClick={() => combat()}
          className="btn btn-success material-tooltip-main "
       >
          hit <i className="fas fa-bomb"></i> 5 <i className="fas fa-fire-alt"></i> 5
